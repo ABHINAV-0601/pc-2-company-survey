@@ -13,13 +13,21 @@ public class AverageAge {
             }
             avg = avg / ageRawData.length;
             //Handle specific exception
-        }catch (Exception exception)
+        }catch (NumberFormatException exception)
         {
             return exception.toString();
         }
         return String.valueOf(avg);
     }
 
+    public static void main(String[] args) {
+        AverageAge averageAge = new AverageAge();
 
+        String[] age = {"35","26","32","44"};
+        System.out.println(averageAge.averageAgeCalculator(age));
+        String[] age1 = {"35","26","thirty-two","44"};
+        System.out.println(averageAge.averageAgeCalculator(age1));
+
+    }
 
 }
