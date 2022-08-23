@@ -8,7 +8,10 @@ public class AverageAge {
 
         try{
             //Write the logic
-
+            for (int i = 0; i < ageRawData.length; i++) {
+                avg = avg + Integer.parseInt(ageRawData[i]);
+            }
+            avg = avg / ageRawData.length;
             //Handle specific exception
         }catch (Exception exception)
         {
